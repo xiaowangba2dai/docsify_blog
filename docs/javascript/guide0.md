@@ -12,7 +12,7 @@ docsify init .
 
 ## 3. 运行
 
-docsify serve . 
+docsify serve .
 
 http://localhost:3000 到浏览器中看是否运行成功。
 
@@ -59,5 +59,4 @@ http://localhost:3000 到浏览器中看是否运行成功。
 
 至此，sidebar也完成，至于链接的page可以写个page.md即可。
 
-![messi](images/messi.png)
-
+![messi](../images/messi.png)
