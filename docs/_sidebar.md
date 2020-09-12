@@ -1,4 +1,3 @@
-# docsify安装使用
-
-- [第一课](page)
-- [第二课](page)
+<!-- docs/_sidebar.md -->
+- [Home](/)
+- [Javascript](javascript/)

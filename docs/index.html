@@ -2,23 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>HOME</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: '',
-      coverpage: true,
-      loadSidebar: true,
-      loadNavbar: true
+      repo: 'xiaowangba2dai', // 右上角github链接
+      name: 'blog',
+      logo: '/logo.svg', // 网站图标
+      // coverpage: true, // 封面
+      // onlyCover: false, // 只在访问主页时加载封面
+      loadSidebar: true,  // 侧边栏
+      autoHeader: true,  // 根据_sidebar.md的内容自动为每个页面增加标题
+      loadNavbar: true, // 导航栏
+      mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏
+      subMaxLevel: 2, // 文章目录
+      notFoundPage: true, // 在找不到指定页面时加载_404.md
+      topMargin: 20,  // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
+      disqus: 'shortname',
+
+    // 搜索功能
+    search: {
+      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      paths: 'auto', // or 'auto'
+      placeholder: 'Search something',
+
+      // 支持本地化
+      placeholder: {
+        '/zh-cn/': '搜索',
+        '/': 'Search something'
+      },
+
+      noData: 'No Results!',
+
+      // 支持本地化
+      noData: {
+        '/zh-cn/': '找不到结果',
+        '/': 'No Results'
+      },
+
+      // 搜索标题的最大层级, 1 - 6
+      depth: 2,
+
+      hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+
+      // 避免搜索索引冲突
+      // 同一域下的多个网站之间
+      namespace: 'website-1',
+
+      // 使用不同的索引作为路径前缀（namespaces）
+      // 注意：仅适用于 paths: 'auto' 模式
+      //
+      // 初始化索引时，我们从侧边栏查找第一个路径
+      // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+      pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+      // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+      // 匹配到的字符串将被用来识别索引
+      pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+    }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'Github Application Client ID',
+      clientSecret: 'Github Application Client Secret',
+      repo: 'Github repo',
+      owner: 'Github repo owner',
+      admin: ['Github repo collaborators, only these guys can initialize github issues'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script>
 </body>
 </html>
