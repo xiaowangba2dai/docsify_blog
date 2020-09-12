@@ -1,3 +1,21 @@
-# Headline <!-- {docsify-ignore} -->
+# EZblog <!-- {docsify-ignore} -->
 
-> An awesome project.
+欢迎！~
+
+为什么叫EZblog呢？其实就是Easy blog, 这个灵感来源于我的吉他的名字：EZway。
+
+为什么左边有只动物呢？或许因为很多人叫我小王吧(八)...
+
+> 简单的方式，简单的生活，简单的blog。
+
+## 博客历程
+
+折腾了博客一段时间，从在CSDN写，到自己写个前后端网站，买个域名和服务器，再到现在用的Github pages。
+
+对于我这种学生党来说，还是选择托管在github方便。
+
+也终于有了自己一个很干净的日志空间，以后会多写一点。
+
+最后，不要脸地得写下以下的一句话。
+
+> An easy but awesome blog.
