@@ -1,10 +1,10 @@
 <!-- docs/_sidebar.md -->
 
-* first
+- [firstsss]
 	- [Javascript](javascript/)
 	- [Solidity](solidity/)
 	- [My Leetcode](leetcode/)
-* second
+- [second]
 	- [Javascript](javascript/)
 	- [Solidity](solidity/)
 	- [My Leetcode](leetcode/)
