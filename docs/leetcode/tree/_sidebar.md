@@ -1,3 +1,3 @@
 <!-- docs/leetcode/tree/_sidebar.md -->
 
-* [1.二叉树中序遍历迭代法(Medium)](leetcode/tree/1.二叉树中序遍历迭代法(Medium))
+* [94.二叉树迭代中序遍历](leetcode/tree/94.Binary Tree Inorder Traversal)
