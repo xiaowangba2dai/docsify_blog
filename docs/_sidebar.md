@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-- [firstsss]
+- [firstsss](javascript/)
 	- [Javascript](javascript/)
 	- [Solidity](solidity/)
 	- [My Leetcode](leetcode/)
