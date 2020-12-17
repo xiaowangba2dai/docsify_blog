@@ -1,3 +1,4 @@
-# Javascript Headline <!-- {docsify-ignore} -->
+# My leetcode note<!-- {docsify-ignore} -->
 
-> An awesome project.
+> 记录刷题过程. 争取优化到100%.
+
