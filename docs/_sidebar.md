@@ -1,4 +1,11 @@
 <!-- docs/_sidebar.md -->
-- [Javascript](javascript/)
-- [Solidity](solidity/)
-- [My Leetcode](leetcode/)
+
+* first
+	- [Javascript](javascript/)
+	- [Solidity](solidity/)
+	- [My Leetcode](leetcode/)
+* second
+	- [Javascript](javascript/)
+	- [Solidity](solidity/)
+	- [My Leetcode](leetcode/)
+
