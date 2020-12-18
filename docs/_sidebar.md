@@ -1,11 +1,8 @@
 <!-- docs/_sidebar.md -->
 
-- [firstsss](javascript/)
-	- [Javascript](javascript/)
-	- [Solidity](solidity/)
-	- [My Leetcode](leetcode/)
-- [second]
-	- [Javascript](javascript/)
-	- [Solidity](solidity/)
-	- [My Leetcode](leetcode/)
+- My leetcode
+	- [Tree](leetcode/tree/)
+- [Solidity](solidity/)
+- [Javascript](javascript/)
+
 
