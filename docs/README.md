@@ -1,4 +1,4 @@
-# EZblog <!-- {docsify-ignore} -->
+# EZblog(点击乌龟回到首页) <!-- {docsify-ignore} -->
 
 欢迎！~
 
