@@ -1,6 +1,8 @@
 <!-- docs/_sidebar.md -->
 
-- [产品经理](pm/)
+- 产品
+	- [产品理解](pm/product_understanding/)
+	- [竞品分析](pm/product_analysis/)
 - My leetcode
 	- [Tree](leetcode/tree/)
 - Front-end
