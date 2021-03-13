@@ -4,7 +4,7 @@
 	- [自我修养](pm/product_understanding/)
 	- [需求文档](pm/product_demand/_)
 	- [竞品分析](pm/product_analysis/)
-	- [过往作品](pm/my_product/)
+	- [个人作品](pm/my_product/)
 - My leetcode
 	- [Tree](leetcode/tree/)
 - Front-end
