@@ -1,4 +1,4 @@
 <!-- docs/solidity/_sidebar.md -->
 
-* [用户体验五要素](pm/product_analysic/用户体验五要素)
+* [宠物寄养平台竞品分析](pm/product_analysis/宠物寄养平台竞品分析)
 

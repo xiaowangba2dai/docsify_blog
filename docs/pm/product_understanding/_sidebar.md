@@ -5,4 +5,8 @@
 * [用户体验5要素](pm/product_understanding/用户体验五要素)
 * [0-1冷启动-战略层-产品目标](pm/product_understanding/0-1冷启动-战略层-产品目标)
 * [0-1冷启动-多维度分析报告](pm/product_understanding/0-1冷启动-多维度分析报告)
-
+* [0-1冷启动-如何撰写BRD文档](pm/product_understanding/0-1冷启动-如何撰写BRD文档)
+* [0-1冷启动-如何判断需求真伪](pm/product_understanding/0-1冷启动-如何判断需求真伪)
+* [0-1冷启动-用户调研的方法](pm/product_understanding/0-1冷启动-用户调研的方法)
+* [0-1冷启动-创建用户角色](pm/product_understanding/0-1冷启动-创建用户角色)
+* [0-1冷启动-创建用户画像](pm/product_understanding/0-1冷启动-创建用户画像)
