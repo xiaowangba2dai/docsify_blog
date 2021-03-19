@@ -2,7 +2,7 @@
 
 * [微众银行高校金融科技大赛作品-基于区块链的云数据保险平台](blockchain/item/微众银行高校金融科技大赛作品-基于区块链的云数据保险平台)
 
-* [A Non-repudiation Scheme for Industrial IoT Cloud Applications](blockchain/item/A Non-repudiation Scheme for Industrial IoT Cloud Applications)
+* [云服务信息交互不可抵赖系统](blockchain/item/云服务信息交互不可抵赖系统)
 
   
 
