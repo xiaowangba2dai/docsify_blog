@@ -198,7 +198,7 @@ sleep一般用于当前线程休眠，wait则用于多线程之间的通信
 
 join()执行后线程进入阻塞状态，下图主线程Main中调用线程t1的join(), 那main会进入阻塞队列，直到线程t1结束或中断线程
 
-![image-20210406095934486](D:\Project\docsify\docs\images\java\image-20210406095934486.png)
+![image-20210406095934486](../images/java/image-20210406095934486.png)
 
 ## ThreadLocal 底层存储
 
@@ -245,7 +245,7 @@ public class Test {
 
 1. Mark Word（只有32bit）：存储了很多和当前对象运行时状态有关的数据，比如说hashcode、锁状态标志、指向所记录的指针等等。
 
-   ![image-20210407091700637](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210407091700637.png)
+   ![image-20210407091700637](../images/java/image-20210407091700637.png)
 
    synchronized的同步机制可能存在性能问题，因为synchronized被编译之后实质上是monitorenter和monitorexit两个字节码指令，而monitor是依赖于操作系统的mutex lock来实现的。
 

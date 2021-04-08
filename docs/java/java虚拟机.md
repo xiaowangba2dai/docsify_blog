@@ -1,6 +1,6 @@
-## 1. java 内存区域
+## java 内存区域
 
-![image-20210406132931347](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406132931347.png)
+![image-20210406132931347](../images/java/image-20210406132931347.png)
 
 `线程共享`
 
@@ -28,7 +28,7 @@
 
 **栈帧**
 
-组成：局部变量表、操作数栈、动态连接、方法返回地址
+组成：`局部变量表、操作数栈、动态连接、方法返回地址`
 
 局部变量表：存放局部变量的列表
 
@@ -76,20 +76,19 @@
 
 **（4）方法区**
 
-方法区是java虚拟机的一个模型规范，存储每个类的结构。
+方法区是java虚拟机的一个模型规范，`存储每个类的结构`。
 
-具体实现是永久代和元空间。
+具体实现是`永久代和元空间`。
 
 永久代是1.7的，1.8之后永久代就被移除了。
 
-元空间是分布在计算机内存的，脱离了java虚拟机内存。
+`元空间是分布在计算机内存`的，脱离了java虚拟机内存。
 
 例如运行时常量池、字段和方法数据，以及方法和构造函数的代码，包括用于类和实例初始化以及接口初始化的特殊方法等。
 
-![image-20210406144923270](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406144923270.png)
+![image-20210406144923270](../images/java/image-20210406144923270.png)
 
-## 2. java类加载机制
-`类的生命周期`：
+## 类生命周期
 
 加载：查找并加载类的二进制数据（class文件）
 
@@ -100,7 +99,7 @@
 
 准备：为类的静态变量进行初始化，分配空间并赋予初始值
 
-解析：将符号引用转换为直接应用
+解析：将符号引用转换为直接引用
 
 初始化：对类进行初始化，对静态变量赋予正确值
 
@@ -108,7 +107,7 @@
 
 卸载
 
-`类的加载过程：`
+## 类的加载过程
 
 加载
 
@@ -120,7 +119,7 @@
 
 初始化
 
-## 3. 类加载器
+## 类加载器
 
 启动类加载器（Bootstrap ClassLoader） （JDK/JRE/LIB）
 负责加载JRE的核心类库，如JRE目录下的rt.jar, charsets.jar等
@@ -131,73 +130,21 @@
 系统类加载器（Application ClassLoader）(自己定义的类，类路径下面)
 负责加载classpath路径下的类包
 
+## 类加载过程
+
 （1）全盘负责委托机制
+
 当一个ClassLoader加载一个类的时候，除非显示的使用另一个ClassLoader,，该类所依赖和引用的类也由这个ClassLoader载入
 
 （2）双亲委派机制
+
 先委托父类加载器寻找目标类，在找不到的情况下在自己的路径中查找并载入目标类
 
 **双亲委派模式的优势**
+
 沙箱安全机制：比如自己写的String.class类不会被加载，这样可以防止核心库被随意篡改
+
 避免类的重复加载：当父ClassLoader已经加载了该类的时候，就不需要子ClassLoader再加载一次
 
-## 4. 垃圾回收
-### （1）什么是可回收垃圾对象？
-当一个对象没有引用指向它的时候。
-> Object obj = new Object();
-> obj = null;
+## 如何用ClassLoader解决依赖冲突
 
-### （2）如何找到垃圾对象
-1. 引用计数法
-每个对象有一个引用计数属性，新增一个引用时计数加1，引用释放时计数减1，计数为0时可以回收。
-可能会出现A引用了B，B引用了A，永远无法被回收。
-效率非常高，java不采用。
-
-2. 可达性分析算法
-从GC Roots开始向下搜索，搜索所走过的路径称为引用链。当一个对象到GC Roots没有任何引用链相连时，则证明此对象是不可用的，那么虚拟机就判断是可回收对象。
-
-### （3）垃圾回收算法有哪些
-1. Mark-Sweep（标记清除算法）- 位置不连续，产生碎片
-
-   ![image-20210406164903419](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406164903419.png)
-
-2. Copying（复制算法）- 没有碎片，浪费空间
-
-   ![image-20210406164951451](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406164951451.png)
-
-3. Mark-Compact（标记整理）- 没有碎片，效率偏低
-
-   ![image-20210406165512907](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406165512907.png)
-
-
-### （4）常见的垃圾收集器
-
-![image-20210406165833022](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406165833022.png)
-
-分代模型：
-
-年轻代用复制算法的原因？
-
-因为两个幸存区的大小是一样的，适合复制算法。
-
-
-
-![image-20210406170626993](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406170626993.png)
-
-![image-20210406172456519](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406172456519.png)
-
-![image-20210406172607268](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406172607268.png)
-
-![image-20210406172940467](C:\Users\23752\AppData\Roaming\Typora\typora-user-images\image-20210406172940467.png)
-
-CMS:
-
-初始标记: GC Root的直接相关的对象，这个过程会有STW
-
-并发标记：可以和用户线程一起执行，标记和GC Root间接相关的对象
-
-重新标记：第二部分因为是并发，可能会产生新的一些垃圾，重新标记那些可能新产生的垃圾对象
-
-并发清理：
-
-G1:
