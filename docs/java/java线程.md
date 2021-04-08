@@ -3,8 +3,11 @@
 
 ## 多线程的创建方式
 （1）继承Thread类，重写Thread的run方法
+
 （2）实现Runnable接口
+
 （3）实现Callable接口
+
 （4）线程池
 
 
@@ -60,25 +63,41 @@ public class Test{
 
 ##  线程的六种状态
 （1）NEW：初始化态，`Thread thread = new Thread()`;
+
 （2）RUNNABLE：`thread.start()`;
 	Ready: 准备态
 	Running:执行态
+
 （3）BLOCKED：阻塞态，拿不到锁，只能在外面等。
+
 （4）WAITING：等待态，拿到锁之后，发现当前执行条件不满足，需要暂时停止执行，让出CPU,`thread.wait()`
+
 （5）TIMED_WAITING：超时等待态，等个固定时间，`thread.wait(2000)`
+
 （6）TERMINATED：结束态
 
 ## sleep和wait的区别
 Sleep:
-	暂停当前线程执行，但是不释放锁
-	Thread对象的
-	可以在任何场景下使用
-	只有睡够时间才能醒
+
+​	暂停当前线程执行，但是不释放锁
+
+​	Thread对象的
+
+​	可以在任何场景下使用
+
+​	只有睡够时间才能醒
+
 Wait:
-	暂停当前线程执行，释放锁
-	Object对象的
-	只能在同步块中使用
-	可以随时唤醒
+
+​	暂停当前线程执行，释放锁
+
+​	Object对象的
+
+​	只能在同步块中使用
+
+​	可以随时唤醒
+
+
 
 ## 生产者/消费者模型
 ```java
@@ -166,10 +185,14 @@ public class Test{
 不一定。
 
 原因：
+
 	（1）交给操作系统调度，优先级由操作系统决定
 	java优先级：1-10，win系统只有7级
+	
 	（2）系统会自己改变优先级，win存在优先级推进器的功能。
+	
 	（3）优先级只是倾向性，不能保证一定，调度策略导致的不确定性。
+
 
 ## 可见性 Volatile（轻量级）
 

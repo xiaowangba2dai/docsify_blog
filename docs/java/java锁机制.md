@@ -1,6 +1,115 @@
-## synchonized
+## Synchonized实现线程同步
 
-## Lock, 读写锁，如何解决写饥饿问题
+```java
+public class Test {
+    static Object obj = new Object();
+
+    public static void test1() {
+        Thread t = new Thread(()->{
+            synchronized (obj) {
+                try {
+                    System.out.println("hello");
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        t.start();
+
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        for (int i=0; i<10; i++) {
+            test1();
+        }
+    }
+}
+```
+
+`主动释放锁：obj.wait()`
+
+`唤醒：obj.notify()|obj.notifyAll()` 
+
+## Lock，可重入锁ReentrantLock实现线程同步
+
+```java
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class Test {
+    static Lock lock = new ReentrantLock();
+
+    public static void test2() {
+        Thread t = new Thread(()->{
+                try {
+                    lock.lock();
+                    System.out.println("hello");
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
+                }
+        });
+        t.start();
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        for (int i=0; i<10; i++) {
+            test2();
+        }
+    }
+}
+```
+
+`等待和唤醒`
+
+```java
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class Test {
+    static Lock lock = new ReentrantLock();
+    static Condition c1 = lock.newCondition();
+
+    public static void test2() {
+        Thread t = new Thread(()->{
+                try {
+                    lock.lock();
+                    c1.await(); // 等待
+                    System.out.println("hello");
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
+                }
+        });
+        t.start();
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        for (int i=0; i<10; i++) {
+            test2();
+        }
+
+        Thread.sleep(1000);
+        lock.lock();
+        c1.signalAll(); // 唤醒
+        lock.unlock();
+    }
+}
+```
+
+## Synchonized 和 ReentrantLock（Lock） 区别
+
+Lock: 可以tryLock(), condition可以多个
+
+## 读写锁，如何解决写饥饿问题
 
 ## ThreadLocal, 底层存储，弱引用
 
