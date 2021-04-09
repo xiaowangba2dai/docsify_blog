@@ -43,6 +43,7 @@ java源代码 -> 编译器 -> jvm可执行的字节码 -> jvm ->jvm中的解释�
 ## [List] List和Set的区别
 
 List: `有序`，按对象进入的顺序保存对象，`可重复`，`允许多个Null元素对象`，可以使用Iterator取出所有元素，在逐一遍历，还可以使用get(int index)获取指定下标的元素
+
 Set: `无序`，`不可重复`，`最多允许一个Null元素对象`，取元素时`只能用Iterator接口`取得所有元素，再逐一遍历各个元素
 
 ## [List] ArrayList 和 LinkedList区别
