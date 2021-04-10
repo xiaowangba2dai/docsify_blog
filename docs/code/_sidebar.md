@@ -1,3 +1,4 @@
 <!-- docs/javascript/_sidebar.md -->
 
-* [des(Data Encryption Standard)](code/des)
+* [DES (Data Encryption Standard)](code/DES)
+* [AES (Advance Encryption Standard)](code/AES)
