@@ -7,6 +7,7 @@
 	- [Solidity](blockchain/solidity/)
 	- [成长项目](blockchain/item/)
 - [Java](java/)
+- [加密](code/)
 - My leetcode
 	- [Tree](leetcode/tree/)
 - Front-end
