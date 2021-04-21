@@ -6,8 +6,10 @@
 - 区块链
 	- [Solidity](blockchain/solidity/)
 	- [成长项目](blockchain/item/)
-- [计算机基础](basis/)
+- 计算机基础
 	- [操作系统](basis/operation_system/)
+	- [计算机网络](basis/compute_network/)
+	- [数据结构与算法](basis/data_structure/)
 - [Java](java/)
 - [加密](code/)
 - My leetcode

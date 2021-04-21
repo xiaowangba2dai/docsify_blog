@@ -184,9 +184,54 @@ table.length-1 之后转换为二进制变成地位全是（1），高位（0）
 
 `线程不安全问题`
 
-
+**HashMap的是先put还是先resize？**
 
 ## [Map] LinkedHashMap
+
+`LinkedHashMap` 存储结构和 `HashMap` 相同，依然是数组+链表+红黑树
+
+`LinkedHashMap` 额外持有一个双向链表，维护插入节点的顺序
+
+最终的数据结构：
+
+  - 实际的元素存储与HashMap一致，依然是数组+链表+红黑树的形式
+  - 区别在于：
+    - 除了维护数组+链表的结构之外，还根据插入Map先后顺序维护了一个双向链表的头尾head,tail
+    - Node基本结构，相比较HashMap而言，还增加了 before,after 两个分别指向双向链表中前后节点的属性
+
+```java
+public class LinkedHashMap<K,V>
+    extends HashMap<K,V>
+    implements Map<K,V>
+```
+
+**数据结构**
+从 `put(k, v)` 方法出发，LinkedHashMap 并没有覆盖 put() 方法，所以可以确定底层的存储结构一致。
+
+新增的两个成员：
+
+```java
+static class Entry<K,V> extends HashMap.Node<K,V> {
+        Entry<K,V> before, after;
+        Entry(int hash, K key, V value, Node<K,V> next) {
+            super(hash, key, value, next);
+        }
+    }
+
+
+    /**
+     * The head (eldest) of the doubly linked list.
+     */
+    transient LinkedHashMap.Entry<K,V> head;
+
+    /**
+     * The tail (youngest) of the doubly linked list.
+     */
+    transient LinkedHashMap.Entry<K,V> tail;
+```
+
+双向链表的头尾，根据插入的顺序来维护节点，保证了顺序。
+
 
 
 ## [Map] TreeMap

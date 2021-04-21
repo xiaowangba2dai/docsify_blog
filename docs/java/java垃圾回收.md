@@ -99,6 +99,10 @@ Survivor中有一些对象会在下次minor GC被标记为垃圾，这时候将E
 
 存活对象效率比较高，没有额外空间进行分配
 
+`为什么要分代、分区？`
+
+[IBM](https://www.nowcoder.com/jump/super-jump/word?word=IBM)的研究表明绝大多数对象都是朝生夕死的
+
 `为什么新生代是8：1：1`
 
  GC是统计学测算出当内存使用超过98%以上时，内存就应该被minor gc时回收一次。
