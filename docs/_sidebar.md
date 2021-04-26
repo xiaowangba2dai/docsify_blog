@@ -5,6 +5,7 @@
 	- [个人作品](pm/my_product/)
 - 区块链
 	- [Solidity](blockchain/solidity/)
+	- [共识](blockchain/consensus/)
 	- [成长项目](blockchain/item/)
 - 计算机基础
 	- [操作系统](basis/operation_system/)
