@@ -1,0 +1,5 @@
+## mvcc是什么
+
+在使用READ COMMITTED、REPEATABLE READ 这两种隔离级别的事务在执行普通的select操作时访问记录的版本链的过程。可以使不同事务的读写，写读操作并发执行，从而提升系统性能。
+
+READ COMMITTED、REPEATABLE READ 这两个隔离级别的一个很大的不同就是生成Readview的时机不同，READ COMMITTED在每一次进行select操作时都会生成一个readview，REPEATABLE READ只在第一次进行select操作前生成readview，之后的查询操作都重复使用这个readview 
