@@ -5,6 +5,7 @@
 * [事务](basis/database/事务)
 * [索引](basis/database/索引)
 * [锁](basis/database/锁)
+* [优化](basis/database/优化)
 
   
 
