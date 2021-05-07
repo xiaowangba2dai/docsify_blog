@@ -12,6 +12,7 @@
 	- [计算机网络](basis/compute_network/)
 	- [数据结构与算法](basis/data_structure/)
 	- [数据库](basis/database/)
+	- [Linux](basis/linux/)
 - [Java](java/)
 - [加密](code/)
 - My leetcode
