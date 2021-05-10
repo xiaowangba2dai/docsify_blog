@@ -4,6 +4,7 @@
 	- [自我修养](pm/product_understanding/)
 	- [个人作品](pm/my_product/)
 - 区块链
+	- [基本概念](blockchain/basic/)
 	- [Solidity](blockchain/solidity/)
 	- [共识](blockchain/consensus/)
 	- [成长项目](blockchain/item/)
