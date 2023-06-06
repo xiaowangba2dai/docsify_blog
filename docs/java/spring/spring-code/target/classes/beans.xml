@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        id: 对象的自定义名称，spring通过这个名称找到对象
+        spring把创建好的对象放入到Map中，spring中有一个Mapc存放对象。
+        id是key
+    -->
+    <bean id="someService" class="org.example.service.impl.SomeServiceImpl">
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>

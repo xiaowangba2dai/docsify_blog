@@ -1,0 +1,11 @@
+dataOwnerAddress = 2daec054d9b84232707d2ed9f6ed65aeb8772704
+dataBuyerAddress = ad2f9093c4a089bcfae5656ce57c20bbc233c75a
+contractAddress = 0x1a6728974a85735a44620a227ad5f285f11809ff
+httpService = https://kovan.infura.io/v3/fc7451f984da4d598db57c7f8538ef13
+dataOwnerWalletPassword = your 339339
+dataBuyerWalletPassword = 339339
+keyCount = 5000
+random = 2
+hashC = 0xff3f4036a1164d1ddbad5b3edf9022addb3e1961a54a922708a6c1ffc49e5489
+price = 10000000000000000
+q = 647038720011615355072008362055804028942881373648489777233036897681383
